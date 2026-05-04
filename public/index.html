@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <title>AIT Parking Premium - Management System</title>
+    <style>
+      /* --- SCUT CSS EXTREM ANTI-CODESANDBOX --- */
+      body > div:not(#root),
+      #csb-overlay,
+      .csb-embed-branding,
+      [title="Open Sandbox"],
+      a[href*="codesandbox.io"],
+      iframe {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        z-index: -9999 !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+      }
+
+      /* --- DEFINIRE ANIMAȚII PREMIUM CUSTOM --- */
+      @keyframes pulse-slow {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.85;
+          transform: scale(0.99);
+        }
+      }
+      .animate-pulse-slow {
+        animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes shine {
+        100% {
+          transform: translateX(100%);
+        }
+      }
+      .animate-shine {
+        animation: shine 2.5s infinite;
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 4s linear infinite;
+      }
+
+      @keyframes popup-in {
+        0% {
+          opacity: 0;
+          transform: scale(0.9) translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1) translateY(0);
+        }
+      }
+      .animate-popup-in {
+        animation: popup-in 0.4s ease-out forwards;
+      }
+
+      @keyframes fade-in-fast {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .animate-fade-in-fast {
+        animation: fade-in-fast 0.2s ease-out forwards;
+      }
+
+      /* --- STILIZARE SCROLLBAR --- */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #020617;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 5px;
+        border: 2px solid #020617;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6;
+      }
+
+      /* --- SETĂRI BAZĂ (AICI AM REPARAT SCROLL-UL) --- */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background: #020617;
+        overflow: auto !important; /* Am scos regula care bloca mișcarea în dreapta */
+        width: 100%;
+        height: 100%;
+      }
+
+      #root {
+        min-width: 100%;
+        display: inline-block; /* Asigură că harta mare lărgește ecranul invizibil pe telefon */
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950">
+    <noscript
+      >Trebuie să activezi JavaScript pentru a rula această aplicație
+      PREMIUM.</noscript
+    >
+
+    <div id="root"></div>
+  </body>
+</html>
